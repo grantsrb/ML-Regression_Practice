@@ -1,7 +1,7 @@
 import java.lang.Math;
 import java.util.Random;
 
-public class Implementation {
+public class LinearRegression {
   public static void main(String[] args) {
     // Goal is to create a linear regression function for a given dataset. We will attempt this process with both a pure dataset and a randomized one.
 
@@ -36,19 +36,17 @@ public class Implementation {
       if(Math.abs((theta1 - temp1)) < tolerance) {
         count1++;
       }
-      System.out.println(temp0);
       // Update parameters
       theta0 = temp0;
       theta1 = temp1;
     }
 
-    System.out.println("theta0 " + theta0);
-    System.out.println("theta1 " + theta1);
+    System.out.println("Parameters:\ntheta0: " + theta0);
+    System.out.println("theta1: " + theta1 + "\n");
 
     for(int i = 0; i < 5; i++) {
-      System.out.println("data (" + i + "): ");
-      System.out.println(randomData[i]);
-      System.out.println(hypothesis(theta0, theta1, i+1.0d));
+      System.out.println("Data (" + i + "): " + randomData[i]);
+      System.out.println("Fitted point: " + hypothesis(theta0, theta1, i+1.0d) + "\n");
     }
 
   }
