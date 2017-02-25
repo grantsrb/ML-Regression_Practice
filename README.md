@@ -1,4 +1,4 @@
-#MNIST Digit Recognition Network
+#Machine Learning Practice
 
 ###Satchel Grant
 
